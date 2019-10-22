@@ -1,0 +1,24 @@
+{
+  "name": "Performance__2019",
+  "version": "1.0.0",
+  "description": "## Задание Оптимизировать страницу, выложить результат на [Github-Pages](https://help.github.com/en/articles/creating-a-github-pages-site) и проверить его на [shri-perf.ru](https://shri-perf.ru), отправив адрес вашей страницы.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fosemberg/Performance__2019.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fosemberg/Performance__2019/issues"
+  },
+  "homepage": "https://github.com/fosemberg/Performance__2019#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-inline-css": "^3.3.2"
+  }
+}
