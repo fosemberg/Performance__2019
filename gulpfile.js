@@ -4,14 +4,22 @@ const cleanCSS = require('gulp-clean-css');
 const uglify = require('gulp-uglify-es').default;
 const pipeline = require('readable-stream').pipeline;
 const htmlmin = require('gulp-htmlmin');
-var strip = require('gulp-strip-comments');
+const strip = require('gulp-strip-comments');
+const inline = require('gulp-inline');
 
 
 gulp.task('html', () =>
   gulp.src('./src/index.html')
+    .pipe(strip())
+    .pipe(inline({
+      // base: 'public/',
+      js: uglify,
+      css: [cleanCSS],
+      disabledTypes: ['svg', 'img', 'js'], // Only inline css files
+      // ignore: ['default.css', 'main.css']
+    }))
     // .pipe(inlineCss())
     // .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(strip())
     .pipe(gulp.dest('./'))
 );
 
