@@ -10,7 +10,7 @@ var strip = require('gulp-strip-comments');
 gulp.task('html', () =>
   gulp.src('./src/index.html')
     // .pipe(inlineCss())
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    // .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(strip())
     .pipe(gulp.dest('./'))
 );
