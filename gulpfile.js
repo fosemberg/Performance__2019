@@ -1,14 +1,19 @@
 const gulp = require('gulp');
 const inlineCss = require('gulp-inline-css');
-let cleanCSS = require('gulp-clean-css');
-let uglify = require('gulp-uglify-es').default;
-var pipeline = require('readable-stream').pipeline;
+const cleanCSS = require('gulp-clean-css');
+const uglify = require('gulp-uglify-es').default;
+const pipeline = require('readable-stream').pipeline;
+const htmlmin = require('gulp-htmlmin');
+var strip = require('gulp-strip-comments');
 
-gulp.task('default', function () {
-  return gulp.src('./src/index.html')
-    .pipe(inlineCss())
-    .pipe(gulp.dest('./'));
-});
+
+gulp.task('html', () =>
+  gulp.src('./src/index.html')
+    // .pipe(inlineCss())
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(strip())
+    .pipe(gulp.dest('./'))
+);
 
 gulp.task('css', () =>
   gulp.src('./css/*.css')

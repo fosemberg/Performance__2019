@@ -20,7 +20,9 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.2.0",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-inline-css": "^3.3.2",
+    "gulp-strip-comments": "^2.5.2",
     "gulp-uglify": "^3.0.2",
     "gulp-uglify-es": "^2.0.0",
     "readable-stream": "^3.4.0"
