@@ -25,14 +25,14 @@ gulp.task('html', () =>
 );
 
 gulp.task('css', () =>
-  gulp.src('./css/*.css')
+  gulp.src('./src/css/*.css')
     .pipe(cleanCSS())
     .pipe(gulp.dest(`${destFolder}/css/`))
 );
 
 gulp.task('js', () =>
   pipeline(
-    gulp.src('./js/*.js'),
+    gulp.src('./src/js/*.js'),
     uglify(),
     gulp.dest(`${destFolder}/js/`)
   )
